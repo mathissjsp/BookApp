@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView{
-            Text("home").tabItem {
+            home().tabItem {
                 Image(systemName: "house")
                 Text("Home")
             }
@@ -134,19 +134,62 @@ struct search: View {
             .listStyle(.plain)
             .padding()
             
-           
+            
         }
-        
-        
     }
-    
-    
-    
-    
-    
 }
 
 
+struct home: View {
+    var body: some View {
+        NavigationStack{
+            VStack{
+                HStack{
+                    Text("stone island").font(.system(.largeTitle, design: .serif, weight: .bold))
+                    Spacer()
+                }.padding()
+            }
+            
+            VStack{
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 10) {
+                        Image("stoniezwart")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 150, height: 150)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .shadow(radius: 5)
+                        
+                        Image("stoniegrijs")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 150, height: 150)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .shadow(radius: 5)
+                        
+                        Image("stoniezwart")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 150, height: 150)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .shadow(radius: 5)
+                        
+                        Image("stoniegrijs")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 150, height: 150)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .shadow(radius: 5)
+                    }
+                    .padding()
+                    Spacer()
+                }
+            }
+        }
+        
+    }
+}
 
 
 
