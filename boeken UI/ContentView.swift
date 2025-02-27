@@ -260,64 +260,89 @@ struct home: View {
                             Spacer()
                         }
                         
-                        HStack{
+                        HStack {
                             ScrollView(.horizontal, showsIndicators: false) {
-                                
-                                VStack{
-                                    HStack(spacing: 40){
-                                        HStack{
+                                HStack(spacing: 20) {
+                                    
+                                    
+                                    HStack(spacing: 40) {
+                                        HStack {
                                             Image("boek2")
                                                 .resizable()
                                                 .scaledToFill()
                                                 .frame(width: 70, height: 90)
                                                 .shadow(radius: 5)
                                             
-                                            VStack(alignment: .leading){
-                                                Text("develop in Swift \n Fundamentals").fontWeight(.bold)
+                                            VStack(alignment: .leading) {
+                                                Text("Develop in Swift \nFundamentals").fontWeight(.bold)
                                                 Text("Apple Education")
-                                                Text("Book · 15% ").foregroundColor(.gray)
+                                                Text("Book · 15%").foregroundColor(.gray)
                                             }
                                         }
                                         
-                                        HStack{
+                                        HStack {
                                             Image(systemName: "cloud")
                                             Image(systemName: "ellipsis")
                                         }
-                                    }.padding().background(.white).cornerRadius(15)
+                                    }
+                                    .padding()
+                                    .background(Color.white)
+                                    .cornerRadius(15)
                                     
                                     
-                                }
-                                
-                                
-                                VStack{
-                                    HStack(spacing: 40){
-                                        HStack{
-                                            Image("boek2")
+                                    HStack(spacing: 40) {
+                                        HStack {
+                                            Image("boek3")
                                                 .resizable()
                                                 .scaledToFill()
                                                 .frame(width: 70, height: 90)
                                                 .shadow(radius: 5)
                                             
-                                            VStack(alignment: .leading){
-                                                Text("develop in Swift \n Fundamentals").fontWeight(.bold)
+                                            VStack(alignment: .leading) {
+                                                Text("Swift UI Essentials").fontWeight(.bold)
                                                 Text("Apple Education")
-                                                Text("Book · 15% ").foregroundColor(.gray)
+                                                Text("Book · 45%").foregroundColor(.gray)
                                             }
                                         }
                                         
-                                        HStack{
+                                        HStack {
                                             Image(systemName: "cloud")
                                             Image(systemName: "ellipsis")
                                         }
-                                    }.padding().background(.white).cornerRadius(15)
+                                    }
+                                    .padding()
+                                    .background(Color.white)
+                                    .cornerRadius(15)
                                     
+                                    
+                                    HStack(spacing: 40) {
+                                        HStack {
+                                            Image("boek4")
+                                                .resizable()
+                                                .scaledToFill()
+                                                .frame(width: 70, height: 90)
+                                                .shadow(radius: 5)
+                                            
+                                            VStack(alignment: .leading) {
+                                                Text("Advanced Swift").fontWeight(.bold)
+                                                Text("Ray Wenderlich")
+                                                Text("Book · 60%").foregroundColor(.gray)
+                                            }
+                                        }
+                                        
+                                        HStack {
+                                            Image(systemName: "cloud")
+                                            Image(systemName: "ellipsis")
+                                        }
+                                    }
+                                    .padding()
+                                    .background(Color.white)
+                                    .cornerRadius(15)
                                     
                                 }
-                                
-                                
+                                .padding()
                             }
                         }
-                        
                         
                     }.padding().background(LinearGradient(
                         gradient: Gradient(colors: [Color.white, Color.gray.opacity(0.2)]),
