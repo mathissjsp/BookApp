@@ -143,47 +143,187 @@ struct search: View {
 struct home: View {
     var body: some View {
         NavigationStack{
-            VStack{
-                HStack{
-                    Text("stone island").font(.system(.largeTitle, design: .serif, weight: .bold))
-                    Spacer()
-                }.padding()
-            }
+            
             
             VStack{
                 
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 10) {
-                        Image("stoniezwart")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 150, height: 150)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .shadow(radius: 5)
+                ScrollView{
+                    
+                    VStack{
+                        HStack{
+                            Text("Home").font(.system(.largeTitle, design: .serif, weight: .bold))
+                            Spacer()
+                            Image(systemName: "heart")
+                            Image(systemName: "person")
+                        }.padding()
                         
-                        Image("stoniegrijs")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 150, height: 150)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .shadow(radius: 5)
                         
-                        Image("stoniezwart")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 150, height: 150)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .shadow(radius: 5)
+                        HStack{
+                            Text("Top Pics").font(.system(.headline, design: .serif, weight: .bold))
+                            Spacer()
+                        }.padding(.leading,15)
                         
-                        Image("stoniegrijs")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 150, height: 150)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .shadow(radius: 5)
-                    }
-                    .padding()
-                    Spacer()
+                        HStack{
+                            VStack{
+                                HStack{
+                                    Image("boek1").resizable()
+                                        .scaledToFit()
+                                        .frame(width: UIScreen.main.bounds.width * 0.4, height: 200)
+                                        .cornerRadius(15)
+                                        .shadow(radius: 5)
+                                    
+                                }
+                                VStack(alignment: .leading){
+                                    Text("books you might like").fontWeight(.bold).padding(.top )
+                                    Text("Suggestions based on your reading activity.").font(.caption2).foregroundStyle(.gray)
+                                }
+                                
+                            }.padding().frame(width: 250).background(.white).cornerRadius(15)
+                            Spacer()
+                        }.padding().shadow(radius: 5)
+                        
+                        
+                    }.padding().background(LinearGradient(
+                        gradient: Gradient(colors: [Color.white, Color.gray.opacity(0.2)]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    ))
+                    
+                    
+                    
+                    VStack{
+                        HStack{
+                            VStack(alignment: .leading){
+                                HStack{
+                                    Text("Computing & Internet").font(.system(.headline, design: .serif, weight: .bold))
+                                    Image(systemName: "greaterthan").foregroundColor(.gray)
+                                }
+                                Text("Explore best-selling books in this genre").font(.caption2).foregroundStyle(.gray)
+                            }
+                            Spacer()
+                        }
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 35) {
+                                Image("boek2")
+                                
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 80, height: 150)
+                                    .shadow(radius: 5)
+                                
+                                Image("boek3")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 80, height: 150)
+                                    .shadow(radius: 5)
+                                
+                                Image("boek4")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 80, height: 150)
+                                    .shadow(radius: 5)
+                                
+                                Image("boek5")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 80, height: 150)
+                                    .shadow(radius: 5)
+                                
+                                Image("boek3")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 80, height: 150)
+                                    .shadow(radius: 5)
+                                Image("boek4")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 80, height: 150)
+                                    .shadow(radius: 5)
+                            }
+                            .padding()
+                            Spacer()
+                        }
+                    }.padding().background(LinearGradient(
+                        gradient: Gradient(colors: [Color.white, Color.gray.opacity(0.2)]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    ))
+                    
+                    VStack{
+                        HStack{
+                            VStack{
+                                HStack{
+                                    Text("previous").font(.system(.headline, design: .serif, weight: .bold))
+                                    Image(systemName: "greaterthan").foregroundColor(.gray)
+                                }
+                            }
+                            Spacer()
+                        }
+                        
+                        HStack{
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                
+                                VStack{
+                                    HStack(spacing: 40){
+                                        HStack{
+                                            Image("boek2")
+                                                .resizable()
+                                                .scaledToFill()
+                                                .frame(width: 70, height: 90)
+                                                .shadow(radius: 5)
+                                            
+                                            VStack(alignment: .leading){
+                                                Text("develop in Swift \n Fundamentals").fontWeight(.bold)
+                                                Text("Apple Education")
+                                                Text("Book · 15% ").foregroundColor(.gray)
+                                            }
+                                        }
+                                        
+                                        HStack{
+                                            Image(systemName: "cloud")
+                                            Image(systemName: "ellipsis")
+                                        }
+                                    }.padding().background(.white).cornerRadius(15)
+                                    
+                                    
+                                }
+                                
+                                
+                                VStack{
+                                    HStack(spacing: 40){
+                                        HStack{
+                                            Image("boek2")
+                                                .resizable()
+                                                .scaledToFill()
+                                                .frame(width: 70, height: 90)
+                                                .shadow(radius: 5)
+                                            
+                                            VStack(alignment: .leading){
+                                                Text("develop in Swift \n Fundamentals").fontWeight(.bold)
+                                                Text("Apple Education")
+                                                Text("Book · 15% ").foregroundColor(.gray)
+                                            }
+                                        }
+                                        
+                                        HStack{
+                                            Image(systemName: "cloud")
+                                            Image(systemName: "ellipsis")
+                                        }
+                                    }.padding().background(.white).cornerRadius(15)
+                                    
+                                    
+                                }
+                                
+                                
+                            }
+                        }
+                        
+                        
+                    }.padding().background(LinearGradient(
+                        gradient: Gradient(colors: [Color.white, Color.gray.opacity(0.2)]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    ))
                 }
             }
         }
